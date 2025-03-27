@@ -1,6 +1,4 @@
-import './acc.js';
-import scrollSection from './scrollSection.js';
+import './app.js';
 
-const menuLinks = document.querySelectorAll('[data-btn="menuLink"]');
+const $body = document.body;
 
-menuLinks.forEach((item) => item.addEventListener('click', scrollSection));

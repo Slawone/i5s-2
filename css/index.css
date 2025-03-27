@@ -264,6 +264,9 @@ body {
   color: var(--color-dark);
   background-color: var(--color-light);
 }
+body.active {
+  overflow: hidden;
+}
 
 a,
 button,
@@ -418,6 +421,9 @@ p {
   position: absolute;
   top: 100%;
   left: -100%;
+}
+.header__menu.active {
+  left: 0;
 }
 @media (min-width: 768px) {
   .header__menu {
@@ -961,7 +967,7 @@ p {
   color: var(--color-dark);
 }
 .about__presentation-arrow {
-  width: 100px;
+  width: 50px;
   align-self: center;
   margin-inline: auto;
 }
