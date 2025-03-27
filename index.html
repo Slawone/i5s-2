@@ -10,7 +10,7 @@
   <script type="module" src="./js/index.js"></script>
 </head>
 <body>
-  <header class="header">
+  <header class="header" data-name="header">
     <div class="container">
       <div class="header__inner">
         <a class="header__logo logo" href="/">
@@ -26,13 +26,16 @@
         <nav class="header__menu menu">
           <ul class="menu__list">
             <li class="menu__item">
-              <a class="menu__link">Возможности</a>
+              <a class="menu__link" data-btn="menuLink"
+                data-target="services">Возможности</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link">О системе</a>
+              <a class="menu__link" data-btn="menuLink"
+                data-target="about">О системе</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link">Контакты</a>
+              <a class="menu__link" data-btn="menuLink"
+                data-target="contacts">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -108,7 +111,7 @@
         </ul>
       </div>
     </section>
-    <section class="services">
+    <section class="services" data-name="services">
       <div class="container">
         <h2 class="services__title">Наши возможности</h2>
         <p class="services__subtitle">
@@ -219,7 +222,7 @@
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" data-name="about">
       <div class="container">
         <h2 class="about__title">Что такое <span class="accent-color">5S</span></h2>
         <div class="about__subtitle">5S – это пять японских слов описывающих цикл, состоящий из последовательных шагов (five steps).</div>
@@ -282,7 +285,7 @@
         </div>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts" data-name="contacts">
       <div class="container">
         <h2 class="contacts__title">Связаться с нами</h2>
         <div class="contacts__inner">

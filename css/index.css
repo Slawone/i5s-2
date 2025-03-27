@@ -991,6 +991,7 @@ p {
   padding: 10px 20px;
   height: 100px;
   resize: none;
+  border-radius: var(--border-radius);
 }
 .form .form__textarea::placeholder {
   color: var(--color-accent);
@@ -1010,6 +1011,37 @@ p {
   }
 }
 
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+.card__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+}
+.card .card__img {
+  width: 60px;
+  height: 60px;
+}
+.card .card__title {
+  font-size: 18px;
+  color: #000;
+}
+.card .card__copy {
+  color: #00b6cc;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
 .contacts {
   padding-block: var(--section-padding-y);
   background-color: var(--color-gray);
@@ -1027,17 +1059,29 @@ p {
 }
 .contacts__data {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-}
-@media (min-width: 768px) {
-  .contacts__data {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-  }
 }
 @media (min-width: 1024px) {
   .contacts__data {
     max-width: 550px;
-    gap: 20px;
+  }
+}
+.contacts__data .card {
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .contacts__data .card {
+    padding: 10px;
+  }
+  .contacts__data .card__img {
+    width: 30px;
+  }
+  .contacts__data .card__title {
+    font-size: 14px;
+  }
+  .contacts__data .card__copy {
+    font-size: 12px;
   }
 }
 .contacts__form {
